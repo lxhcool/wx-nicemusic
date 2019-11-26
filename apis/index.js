@@ -27,6 +27,17 @@ class Api extends HTTP {
 			url: 'personalized/newsong'
 		})
 	}
+  // 获取全部MV
+  getMv(area, limit, offset) {
+    return this.request({
+      url: 'top/mv',
+      data: {
+        area,
+        limit,
+        offset
+      }
+    })
+  }
 }
 
 export {

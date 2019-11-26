@@ -1,94 +1,106 @@
-.screen-swiper image,
-.swiper-item image {
-	width: 100%;
-	display: block;
-	height: 100%;
-	margin: 0;
-	pointer-events: none;
+.screen-swiper image, .swiper-item image {
+  width: 100%;
+  display: block;
+  height: 100%;
+  margin: 0;
+  pointer-events: none;
 }
 
 swiper .a-swiper-dot {
-	display: inline-block;
-	width: 16rpx;
-	height: 16rpx;
-	background: rgba(0, 0, 0, .3);
-	border-radius: 50%;
-	vertical-align: middle;
+  display: inline-block;
+  width: 16rpx;
+  height: 16rpx;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  vertical-align: middle;
 }
 
 swiper[class*="-dot"] .wx-swiper-dots {
-	display: flex;
-	align-items: center;
-	width: 100%;
-	justify-content: center;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
 }
 
 swiper.square-dot .wx-swiper-dot {
-	background-color: var(--white);
-	opacity: 0.4;
-	width: 10rpx;
-	height: 10rpx;
-	border-radius: 20rpx;
-	margin: 0 8rpx !important;
+  background-color: var(--white);
+  opacity: 0.4;
+  width: 10rpx;
+  height: 10rpx;
+  border-radius: 20rpx;
+  margin: 0 8rpx !important;
 }
 
 swiper.square-dot .wx-swiper-dot.wx-swiper-dot-active {
-	opacity: 1;
-	width: 30rpx;
+  opacity: 1;
+  width: 30rpx;
 }
 
 swiper.round-dot .wx-swiper-dot {
-	width: 10rpx;
-	height: 10rpx;
-	position: relative;
-	margin: 4rpx 8rpx !important;
+  width: 10rpx;
+  height: 10rpx;
+  position: relative;
+  margin: 4rpx 8rpx !important;
 }
 
 swiper.round-dot .wx-swiper-dot.wx-swiper-dot-active::after {
-	content: "";
-	position: absolute;
-	width: 10rpx;
-	height: 10rpx;
-	top: 0rpx;
-	left: 0rpx;
-	right: 0;
-	bottom: 0;
-	margin: auto;
-	background-color: var(--white);
-	border-radius: 20rpx;
+  content: "";
+  position: absolute;
+  width: 10rpx;
+  height: 10rpx;
+  top: 0rpx;
+  left: 0rpx;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: var(--white);
+  border-radius: 20rpx;
 }
 
 swiper.round-dot .wx-swiper-dot.wx-swiper-dot-active {
-	width: 18rpx;
-	height: 18rpx;
+  width: 18rpx;
+  height: 18rpx;
 }
 
 .screen-swiper {
-	min-height: 375rpx;
+  min-height: 375rpx;
 }
 
 .card-swiper {
-	width: 100%;
-	height: 37.037037vw;
-	margin: 10rpx 0rpx;
+  width: 100%;
+  height: 37.037037vw;
+  margin: 10rpx 0rpx;
 }
 
 .card-swiper swiper-item {
-	width: 100%;
+  width: 100%;
 }
 
 .card-swiper swiper-item .swiper-item {
-	width: 94%;
-	margin: 0 auto;
-	display: block;
-	height: 100%;
-	border-radius: 10rpx;
-	transform: scale(0.92);
-	transition: all 0.2s ease-in 0s;
-	overflow: hidden;
+  width: 94%;
+  margin: 0 auto;
+  display: block;
+  height: 100%;
+  border-radius: 10rpx;
+  transform: scale(0.92);
+  transition: all 0.2s ease-in 0s;
+  overflow: hidden;
 }
 
 .card-swiper swiper-item.cur .swiper-item {
-	transform: none;
-	transition: all 0.2s ease-in 0s;
+  transform: none;
+  transition: all 0.2s ease-in 0s;
+}
+
+.border-after::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: '';
+  box-sizing: border-box;
+  height: 1px;
+  border-bottom: 1px solid rgba(203, 203, 203, 0.1);
+  transform: scaleY(0.1);
+  transform-origin: 0 0;
 }

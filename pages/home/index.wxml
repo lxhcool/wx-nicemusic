@@ -65,7 +65,7 @@
       </view>
     </view>
   </view>
-  <!-- 推荐歌单 -->
+  <!-- 新歌 -->
   <view class="personalized-wrap newsong-wrap">
     <view class="title">
       <text>新歌</text>
@@ -79,6 +79,30 @@
           </view>
         </view>
       </scroll-view>
+    </view>
+  </view>
+  <!-- mv -->
+  <view class="home-mv-wrap">
+    <view class="title border-after">
+      <text>精选视频</text>
+      <view class="more">
+        <text class="niceicon niceshuaxin"></text>获取新内容
+      </view>
+    </view>
+    <view class="list">
+      <view class="scroll">
+        <view class="item">
+          <view class="cover">
+            <image class="cover-image" src="http://p1.music.126.net/2DXcuWoMbAx4BJI7fp6ssw==/109951164341652840.jpg" mode="aspectFit"></image>
+            <view class="bottom">
+              <view class="play-num">
+                <text class="niceicon nicebofang1"></text> 
+                <text>39326</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
     </view>
   </view>
 </view>
