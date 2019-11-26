@@ -1,0 +1,98 @@
+.song-icon {
+  position: relative;
+  width: 40rpx;
+  height: 40rpx;
+  margin-left: 20rpx;
+  margin-right: 10rpx;
+}
+
+.song-icon .line {
+  width: 3rpx;
+  height: 40rpx;
+  border-radius: 100rpx;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0rpx;
+}
+
+.song-icon .line1 {
+  height: 30rpx;
+  left: 0;
+}
+
+.song-icon .line2 {
+  height: 12rpx;
+  left: 30%;
+}
+
+.song-icon .line3 {
+  height: 40rpx;
+  left: 60%;
+}
+
+.song-icon .line4 {
+  height: 20rpx;
+  left: 90%;
+}
+
+.song-icon.playing .line1 {
+  animation: line1 0.6s infinite ease-in-out alternate;
+}
+
+.song-icon.playing .line2 {
+  animation: line2 0.6s infinite ease-in-out alternate;
+}
+
+.song-icon.playing .line3 {
+  animation: line3 0.6s infinite ease-in-out alternate;
+}
+
+.song-icon.playing .line4 {
+  animation: line4 0.6s infinite ease-in-out alternate;
+}
+
+/* 
+.nav-bar .song-icon {
+  display: inline-block;
+  vertical-align: middle;
+} */
+
+@keyframes line1 {
+  from {
+    height: 24rpx;
+  }
+
+  to {
+    height: 12rpx;
+  }
+}
+
+@keyframes line2 {
+  from {
+    height: 12rpx;
+  }
+
+  to {
+    height: 35rpx;
+  }
+}
+
+@keyframes line3 {
+  from {
+    height: 35rpx;
+  }
+
+  to {
+    height: 20rpx;
+  }
+}
+
+@keyframes line4 {
+  from {
+    height: 20rpx;
+  }
+
+  to {
+    height: 30rpx;
+  }
+}

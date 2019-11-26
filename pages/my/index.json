@@ -1,0 +1,8 @@
+{
+	"navigationBarTextStyle": "white",
+	"backgroundColorTop": "#000000",
+  "enablePullDownRefresh": false,
+	"usingComponents": {
+		"skeleton": "../../components/skeleton/skeleton"
+	}
+}

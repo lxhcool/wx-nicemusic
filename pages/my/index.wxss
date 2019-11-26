@@ -1,0 +1,33 @@
+.top {
+	width: 100%;
+	height: 615rpx;
+	position: relative;
+}
+
+.top .bg {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.top .user {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.top .user .avatar {
+	width: 150rpx;
+	height: 150rpx;
+	border-radius: 50%;
+	margin-top: 100rpx;
+}
+
+.top .user .name {
+	font-size: 38rpx;
+	color: #ffffff;
+	display: block;
+	margin-top: 40rpx;
+}

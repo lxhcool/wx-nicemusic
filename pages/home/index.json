@@ -1,0 +1,11 @@
+{
+  "navigationBarTextStyle": "white",
+  "navigationStyle": "custom",
+  "backgroundColor": "#141e30",
+  "backgroundColorTop": "#141e30",
+  "backgroundColorBottom": "#141e30",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "n-song-icon": "/components/songIcon/index"
+  }
+}

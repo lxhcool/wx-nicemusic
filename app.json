@@ -1,0 +1,18 @@
+{
+	"pages": [
+		"pages/home/index",
+		"pages/login/index",
+		"pages/my/index"
+	],
+	"window": {
+		"backgroundTextStyle": "dark",
+		"backgroundColor": "#ffffff",
+		"navigationBarTitleText": "nicemusic",
+		"navigationBarTextStyle": "black",
+		"navigationStyle": "custom"
+	},
+	"sitemapLocation": "sitemap.json",
+	"usingComponents": {
+		"navBar": "/components/navBar/navBar"
+	}
+}

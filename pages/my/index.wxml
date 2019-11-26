@@ -1,0 +1,13 @@
+
+<view class="my-wrap">
+  <view class="nav">
+    <navBar title="我的" background="rgba(0,0,0,0)" color='#ffffff'></navBar>
+  </view>
+	<view class="top">
+  	<image src="/images/bg.jpg" class="bg"></image>
+		<view class="user flex-colunm">
+			<image src="https://www.lxhcool.cn/wp-content/uploads/avatars/avatar-1-84.jpg" class="avatar"></image>
+			<text class="name">One</text>
+		</view>
+	</view>
+</view>

@@ -1,0 +1,84 @@
+<view class="home-wrap">
+  <navBar background='#141e30' backgroundColorTop='#141e30' color='#fff' iconTheme='white'>
+    <n-song-icon slot="left" playing="{{playing}}" />
+    <view slot="center" class="search-wrap flex-row">
+      <view class="niceicon nicesearch search-icon flex-row"></view>
+      <view class="search-keyword flex-row">房间 - 刘瑞琦</view>
+    </view>
+  </navBar>
+  <swiper class="card-swiper square-dot" indicator-dots="true" circular="{{true}}" autoplay="{{false}}" interval="5000" duration="500" bindchange="cardSwiper" indicator-color="#ffffff" indicator-active-color="#ffffff">
+    <swiper-item wx:for="{{swiperList}}" wx:key="id" class="{{cardCur==index?'cur':''}}">
+      <view class="swiper-item">
+        <image src="{{item.pic}}" mode="aspectFit"></image>
+      </view>
+    </swiper-item>
+  </swiper>
+  <!-- 入口 -->
+  <view class="short-nav">
+    <view class="container">
+      <view class="item">
+        <view class="box">
+          <view class="niceicon nicerili flex-row">
+            <text class="day">{{currentDay}}</text>
+          </view>
+        </view>
+        <view class="p">每日推荐</view>
+      </view>
+      <view class="item">
+        <view class="box">
+          <view class="niceicon niceyinleliebiao song-list"></view>
+        </view>
+        <view class="p">歌单</view>
+      </view>
+      <view class="item">
+        <view class="box">
+          <view class="niceicon nicepaihangbang1"></view>
+        </view>
+        <view class="p">排行榜</view>
+      </view>
+      <view class="item">
+        <view class="box">
+          <view class="niceicon nicegeshou"></view>
+        </view>
+        <view class="p">歌手</view>
+      </view>
+      <view class="item">
+        <view class="box">
+          <view class="niceicon niceshipin1"></view>
+        </view>
+        <view class="p">视频</view>
+      </view>
+    </view>
+  </view>
+  <!-- 推荐歌单 -->
+  <view class="personalized-wrap">
+    <view class="title">
+      <text>推荐歌单</text>
+      <text class="more">歌单广场</text>
+    </view>
+    <view class="list">
+      <view class="item" wx:for="{{personalizedList}}" wx:key="id">
+        <view class="box">
+          <image src="{{item.picUrl}}" mode="aspectFit"></image>
+          <view class="remd-text ellipsis-two">{{item.name}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 推荐歌单 -->
+  <view class="personalized-wrap newsong-wrap">
+    <view class="title">
+      <text>新歌</text>
+    </view>
+    <view class="list">
+      <scroll-view class="newsong-scroll" scroll-x="{{true}}" scroll-with-animation="{{true}}" enable-flex="{{true}}">
+        <view class="item" wx:for="{{newSongList}}" wx:key="id">
+          <view class="box">
+            <image src="{{item.song.album.picUrl}}" mode="aspectFit"></image>
+            <view class="remd-text ellipsis-two">{{item.name}}</view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+</view>

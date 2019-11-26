@@ -1,0 +1,6 @@
+<view class="song-icon {{playing ? 'playing' : ''}}">
+  <view class="line line1"></view>
+  <view class="line line2"></view>
+  <view class="line line3"></view>
+  <view class="line line4"></view>
+</view>
