@@ -1,15 +1,29 @@
 <view class="player">
 	<view class="nav">
-    <navBar title="{{title}}" background="rgba(0,0,0,0)" color='#ffffff' iconTheme='white'  back="{{true}} " home="{{true}}"></navBar>
+    <navBar background="rgba(0,0,0,0)" color='#ffffff' iconTheme='white'  back="{{true}} " home="{{true}}">
+      <view class="nav-title" slot="center">
+        <view class="name">芙蓉雨</view>
+        <view class="author">刘珂矣</view>
+      </view>
+    </navBar>
   </view>
-	<view class="normal-player">
+	<view class="normal-player flex-colunm">
 		<view class="background">
       <image src="{{bg}}" />
     </view>
-		<view class="middle">
+		<view class="middle flex-colunm">
 			<view class="cd-wrapper flex-row">
 				<image src="{{bg}}" class="cd-img" mode="aspectFill"></image>
 			</view>
 		</view>
+    <view class="bottom">
+      <view class="progress">
+        <text class="time time-left">{{currentTime}}</text>
+        <view class="progress-bar-wrapper">
+          <progress-bar percent="{{percent}}"></progress-bar>
+        </view>
+        <text class="time time-right">{{duration}}</text>
+      </view>
+    </view>
 	</view>
 </view>

@@ -6,7 +6,7 @@ Page({
 	 */
 	data: {
 		bg: 'http://p2.music.126.net/0QKeN1ZJtrwCDoX8fK72CA==/109951164209431473.jpg',
-		title: '那女孩对我说'
+		title: '芙蓉雨'
 	},
 
 	/**
