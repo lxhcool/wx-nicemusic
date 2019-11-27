@@ -11,17 +11,19 @@
 }
 
 .skeleton__item_bg {
-  background-color: #ffffff;
+  background-color: #fff;
   border-radius: 12rpx;
 }
 
 .skeleton__item_rect {
   background: linear-gradient(117deg, rgba(232, 236, 242, 1) 0%, rgba(245, 247, 251, 1) 100%);
+  background: linear-gradient(117deg, rgba(36, 59, 85, 0.8) 0%, rgba(20, 30, 48, 1) 100%);
   border-radius: 12rpx;
 }
 
 .skeleton__item_circle {
   background: linear-gradient(117deg, rgba(232, 236, 242, 1) 0%, rgba(245, 247, 251, 1) 100%);
+  background: linear-gradient(117deg, rgba(36, 59, 85, 0.8) 0%, rgba(20, 30, 48, 1) 100%);
   border-radius: 200rpx;
 }
 

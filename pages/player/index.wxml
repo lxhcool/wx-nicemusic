@@ -1,0 +1,15 @@
+<view class="player">
+	<view class="nav">
+    <navBar title="{{title}}" background="rgba(0,0,0,0)" color='#ffffff' iconTheme='white'  back="{{true}} " home="{{true}}"></navBar>
+  </view>
+	<view class="normal-player">
+		<view class="background">
+      <image src="{{bg}}" />
+    </view>
+		<view class="middle">
+			<view class="cd-wrapper flex-row">
+				<image src="{{bg}}" class="cd-img" mode="aspectFill"></image>
+			</view>
+		</view>
+	</view>
+</view>

@@ -1,4 +1,12 @@
-<view class="home-wrap">
+<n-skeleton
+  loading="{{ skeleton.selectedLoadingType }}"
+  bgcolor="{{ skeleton.bgcolor }}"
+  isDev="{{ skeleton.isDev }}"
+  data="{{ skeleton.skeletonData }}"
+  wx:if="{{ !pageIsReady || skeleton.isDev }}"
+></n-skeleton>
+
+<view class="home-wrap container {{isX ? 'isX' : ''}}" wx:if="{{pageIsReady}}">
   <navBar background='#141e30' backgroundColorTop='#141e30' color='#fff' iconTheme='white'>
     <n-song-icon slot="left" playing="{{playing}}" />
     <view slot="center" class="search-wrap flex-row">
@@ -9,13 +17,13 @@
   <swiper class="card-swiper square-dot" indicator-dots="true" circular="{{true}}" autoplay="{{false}}" interval="5000" duration="500" bindchange="cardSwiper" indicator-color="#ffffff" indicator-active-color="#ffffff">
     <swiper-item wx:for="{{swiperList}}" wx:key="id" class="{{cardCur==index?'cur':''}}">
       <view class="swiper-item">
-        <image src="{{item.pic}}" mode="aspectFit"></image>
+        <image src="{{item.pic}}" mode="aspectFill"></image>
       </view>
     </swiper-item>
   </swiper>
   <!-- 入口 -->
   <view class="short-nav">
-    <view class="container">
+    <view class="flex-row">
       <view class="item">
         <view class="box">
           <view class="niceicon nicerili flex-row">
@@ -59,7 +67,7 @@
     <view class="list">
       <view class="item" wx:for="{{personalizedList}}" wx:key="id">
         <view class="box">
-          <image src="{{item.picUrl}}" mode="aspectFit"></image>
+          <image src="{{item.picUrl}}" mode="aspectFill"></image>
           <view class="remd-text ellipsis-two">{{item.name}}</view>
         </view>
       </view>
@@ -74,7 +82,7 @@
       <scroll-view class="newsong-scroll" scroll-x="{{true}}" scroll-with-animation="{{true}}" enable-flex="{{true}}">
         <view class="item" wx:for="{{newSongList}}" wx:key="id">
           <view class="box">
-            <image src="{{item.song.album.picUrl}}" mode="aspectFit"></image>
+            <image src="{{item.song.album.picUrl}}" mode="aspectFill"></image>
             <view class="remd-text ellipsis-two">{{item.name}}</view>
           </view>
         </view>
@@ -91,18 +99,32 @@
     </view>
     <view class="list">
       <view class="scroll">
-        <view class="item">
+        <view class="item" wx:for="{{mvList}}" wx:key="id">
           <view class="cover">
-            <image class="cover-image" src="http://p1.music.126.net/2DXcuWoMbAx4BJI7fp6ssw==/109951164341652840.jpg" mode="aspectFit"></image>
+            <image class="cover-image" src="{{item.cover}}" mode="aspectFill"></image>
             <view class="bottom">
-              <view class="play-num">
-                <text class="niceicon nicebofang1"></text> 
-                <text>39326</text>
-              </view>
+              <text class="niceicon nicebofang1"></text> 
+              <text>{{common.tranNumber(item.playCount, 0)}}</text>
             </view>
           </view>
+					<view class="text flex-row">
+						<text class="niceicon nicemv24"></text>
+						<text class="name ellipsis">{{item.name}}</text>
+					</view>
+					<view class="comment flex-row">
+						<text class="niceicon niceicon-"></text>
+						<view class="author-list flex-row">
+							<view class="dot" wx:for="{{item.artists}}" wx:for-index="author" wx:for-item="itemAuthor" wx:key="id">{{itemAuthor.name}}</view>
+						</view>
+					</view>
         </view>
+      </view>
+			<view class="no-data">
+        <n-loading  finishedText="{{finishedText}}" isShow="{{isShow}}" isFixed="{{isFixed}}"></n-loading>
       </view>
     </view>
   </view>
 </view>
+<n-footer current="1"></n-footer>
+<n-gotop floorstatus="{{floorstatus}}"></n-gotop>
+<wxs module="common" src="../../wxs/common.wxs"></wxs>

@@ -1,0 +1,3 @@
+<view class="gotop {{isX ? 'isX' : ''}}" bind:tap="onTop" hidden="{{!floorstatus}}">
+	<image src="/images/gotop.png"></image>
+</view>

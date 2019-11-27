@@ -1,0 +1,22 @@
+.gotop {
+	width: 80rpx;
+	height: 80rpx;
+	position: fixed;
+	right: 20rpx;
+	bottom: 140rpx;
+	z-index: 1000;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: rgba(0, 0, 0, 0.8);
+	border-radius: 50%;
+}
+
+.gotop.isX {
+	bottom: 188rpx;
+}
+
+.gotop image {
+	width: 50rpx;
+	height: 50rpx;
+}

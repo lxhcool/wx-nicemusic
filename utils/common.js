@@ -12,6 +12,25 @@ function getRandomArrayElements(arr, count) {
 	return shuffled.slice(min);
 }
 
+// 单位转换 100000 -> 10万
+function tranNumber(num, point) {
+	let numStr = num.toString()
+	// 十万以内直接返回
+	if (numStr.length < 6) {
+		return numStr
+	} else if (numStr.length > 8) {
+		// 大于8位数是亿
+		let decimal = numStr.substring(numStr.length - 8, numStr.length - 8 + point)
+		return parseFloat(parseInt(num / 100000000) + '.' + decimal) + '亿'
+	} else if (numStr.length > 5) {
+		// 大于6位数是十万 (以10W分割 10W以下全部显示)
+		let decimal = numStr.substring(numStr.length - 4, numStr.length - 4 + point)
+		return parseFloat(parseInt(num / 10000) + '.' + decimal) + '万'
+	}
+}
+
+
 module.exports = {
-	getRandomArrayElements
+	getRandomArrayElements,
+	tranNumber
 }

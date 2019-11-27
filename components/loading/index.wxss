@@ -1,0 +1,95 @@
+.loading .spinner {
+  width: 40rpx;
+  height: 40rpx;
+  position: relative;
+  margin: 40rpx auto 20rpx;
+}
+
+.loading .double-bounce1, 
+.loading .double-bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #ff5b73;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: bounce 2.5s infinite ease-in-out;
+}
+
+.loading .double-bounce2 {
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
+}
+
+.loading .bounce {
+  animation-name: bounce;
+}
+
+.loading.fixed {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background-color: rgba(41, 40, 69, 0.95);
+  z-index: 6666;
+}
+
+.loading.fixed .spinner {
+  left: 50%;
+  top: 50%;
+  margin: -20rpx 0 0 -20rpx;
+}
+
+.loading.fixed .double-bounce1, 
+.loading.fixed .double-bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #ff5b73;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: bounceFixed 3s infinite alternate;
+}
+
+.loading.fixed .double-bounce2 {
+  animation-delay: -1s;
+}
+
+.loading-text {
+	color: #ffffff;
+	font-size: 24rpx;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-bottom: 25rpx;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-15px);
+  }
+
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes bounceFixed {
+  0%, 100% {
+    transform: scale(0.2);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+}

@@ -1,4 +1,3 @@
-
 <view class="my-wrap">
   <view class="nav">
     <navBar title="我的" background="rgba(0,0,0,0)" color='#ffffff'></navBar>

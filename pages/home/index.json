@@ -6,6 +6,9 @@
   "backgroundColorBottom": "#141e30",
   "enablePullDownRefresh": false,
   "usingComponents": {
-    "n-song-icon": "/components/songIcon/index"
+    "n-song-icon": "/components/songIcon/index",
+		"n-skeleton": "/components/skeleton/skeleton",
+		"n-loading": "/components/loading/index",
+		"n-footer": "/components/footer/index"
   }
 }

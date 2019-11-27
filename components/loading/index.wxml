@@ -1,0 +1,7 @@
+<view class="loading {{isFixed ? 'fixed' : ''}}">
+  <view class="spinner" wx:if="{{isShow}}">
+    <view class="double-bounce1"></view>
+    <view class="double-bounce2"></view>
+  </view>
+  <view class="loading-text flex-row">{{finishedText}}</view>
+</view>

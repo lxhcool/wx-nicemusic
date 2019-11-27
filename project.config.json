@@ -61,6 +61,13 @@
 					"id": -1,
 					"name": "我的",
 					"pathName": "pages/my/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "播放界面",
+					"pathName": "pages/player/index",
 					"scene": null
 				}
 			]

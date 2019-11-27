@@ -27,14 +27,21 @@ class Api extends HTTP {
 			url: 'personalized/newsong'
 		})
 	}
+	// 获取MV排行
+	getTopMv (params) {
+		return this.request({
+			url: 'top/mv',
+			data: {
+				...params
+			}
+		})
+	}
   // 获取全部MV
-  getMv(area, limit, offset) {
+  getMv(params) {
     return this.request({
-      url: 'top/mv',
+			url: 'mv/all',
       data: {
-        area,
-        limit,
-        offset
+        ...params
       }
     })
   }

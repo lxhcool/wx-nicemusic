@@ -27,12 +27,13 @@ swiper.square-dot .wx-swiper-dot {
   opacity: 0.4;
   width: 10rpx;
   height: 10rpx;
-  border-radius: 20rpx;
+  border-radius: 50%;
   margin: 0 8rpx !important;
 }
 
 swiper.square-dot .wx-swiper-dot.wx-swiper-dot-active {
   opacity: 1;
+	border-radius: 500rpx;
   width: 30rpx;
 }
 
