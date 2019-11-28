@@ -1,29 +1,101 @@
 <view class="player">
-	<view class="nav">
-    <navBar background="rgba(0,0,0,0)" color='#ffffff' iconTheme='white'  back="{{true}} " home="{{true}}">
+  <view class="nav">
+    <navBar background="rgba(0,0,0,0)" color='#ffffff' iconTheme='white' back="{{true}} " home="{{true}}">
       <view class="nav-title" slot="center">
         <view class="name">芙蓉雨</view>
         <view class="author">刘珂矣</view>
       </view>
     </navBar>
   </view>
-	<view class="normal-player flex-colunm">
-		<view class="background">
+  <view class="normal-player">
+    <view class="background">
       <image src="{{bg}}" />
     </view>
-		<view class="middle flex-colunm">
-			<view class="cd-wrapper flex-row">
-				<image src="{{bg}}" class="cd-img" mode="aspectFill"></image>
-			</view>
-		</view>
-    <view class="bottom">
-      <view class="progress">
-        <text class="time time-left">{{currentTime}}</text>
-        <view class="progress-bar-wrapper">
-          <progress-bar percent="{{percent}}"></progress-bar>
+    <view class="middle flex-colunm" bindtap="tabLyric">
+      <view class="before flex-colunm" hidden="{{!isLyric}}">
+        <view class="cd-wrapper flex-row">
+          <image src="{{bg}}" class="cd-img" mode="aspectFill"></image>
         </view>
-        <text class="time time-right">{{duration}}</text>
+        <view class="lyric-line">天青色等烟雨 而我在等你</view>
+        <view class="lyric-line">炊烟袅袅升起 隔江千万里</view>
+      </view>
+      <view class="after flex-colunm" hidden="{{isLyric}}">
+				<scroll-view class="lyric-scroll" scroll-y="{{true}}" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+          <view class="lyric-line">青花瓷-周杰伦</view>
+          <view class="lyric-line">作词：方文山 作曲：周杰伦</view>
+          <view class="lyric-line">素胚勾勒出青花笔锋浓转淡</view>
+          <view class="lyric-line">瓶身描绘的牡丹一如你初妆</view>
+          <view class="lyric-line">冉冉檀香透过窗心事我了然</view>
+          <view class="lyric-line">宣纸上走笔至此搁一半</view>
+          <view class="lyric-line">釉色渲染仕女图韵味被私藏</view>
+          <view class="lyric-line">而你嫣然的一笑如含苞待放</view>
+          <view class="lyric-line">你的美一缕飘散</view>
+          <view class="lyric-line">去到我去不了的地方</view>
+          <view class="lyric-line">天青色等烟雨 而我在等你</view>
+          <view class="lyric-line">炊烟袅袅升起 隔江千万里</view>
+          <view class="lyric-line">在瓶底书汉隶仿前朝的飘逸</view>
+          <view class="lyric-line">就当我为遇见你伏笔</view>
+          <view class="lyric-line">天青色等烟雨 而我在等你</view>
+          <view class="lyric-line">月色被打捞起 晕开了结局</view>
+          <view class="lyric-line">如传世的青花瓷自顾自美丽</view>
+          <view class="lyric-line">你眼带笑意</view>
+          <view class="lyric-line">色白花青的锦鲤跃然于碗底</view>
+          <view class="lyric-line">临摹宋体落款时却惦记着你</view>
+          <view class="lyric-line">你隐藏在窑烧里千年的秘密</view>
+          <view class="lyric-line"> 极细腻犹如绣花针落地 </view>
+          <view class="lyric-line"> 帘外芭蕉惹骤雨门环惹铜绿 </view>
+          <view class="lyric-line"> 而我路过那江南小镇惹了你 </view>
+          <view class="lyric-line"> 在泼墨山水画里 </view>
+          <view class="lyric-line"> 你从墨色深处被隐去 </view>
+          <view class="lyric-line"> 天青色等烟雨 而我在等你 </view>
+          <view class="lyric-line"> 炊烟袅袅升起 隔江千万里 </view>
+          <view class="lyric-line"> 在瓶底书汉隶仿前朝的飘逸 </view>
+          <view class="lyric-line"> 就当我为遇见你伏笔 </view>
+          <view class="lyric-line"> 天青色等烟雨 而我在等你 </view>
+          <view class="lyric-line"> 月色被打捞起 晕开了结局 </view>
+          <view class="lyric-line"> 如传世的青花瓷自顾自美丽 </view>
+          <view class="lyric-line"> 你眼带笑意 </view>
+          <view class="lyric-line"> 天青色等烟雨 而我在等你 </view>
+          <view class="lyric-line"> 炊烟袅袅升起 隔江千万里 </view>
+          <view class="lyric-line"> 在瓶底书汉隶仿前朝的飘逸 </view>
+          <view class="lyric-line"> 就当我为遇见你伏笔 </view>
+          <view class="lyric-line"> 天青色等烟雨 而我在等你 </view>
+          <view class="lyric-line"> 月色被打捞起 晕开了结局 </view>
+          <view class="lyric-line"> 如传世的青花瓷自顾自美丽 </view>
+          <view class="lyric-line"> 你眼带笑意 </view>
+        </scroll-view>
       </view>
     </view>
-	</view>
+    <view class="bottom">
+      <view class="progress flex-row">
+        <view class="progress-bar-wrap">
+          <view class="time flex-between">
+            <view class="left">00:20</view>
+            <view class="right">06:20</view>
+          </view>
+          <n-progress></n-progress>
+        </view>
+      </view>
+      <view class="operators flex-between">
+        <view class="icon mode-icon">
+          <!-- <view class="niceicon niceicon-18"></view> -->
+          <view class="niceicon niceicon-19"></view>
+          <!-- <view class="niceicon niceicon-20"></view> -->
+        </view>
+        <view class="icon left">
+          <view class="niceicon niceSanMiAppglyphico"></view>
+        </view>
+        <view class="icon center flex-row">
+          <!-- <view class="niceicon nicebofang3"></view> -->
+          <view class="niceicon nicezanting"></view>
+        </view>
+        <view class="icon right">
+          <view class="niceicon niceSanMiAppglyphico1"></view>
+        </view>
+        <view class="icon list-icon">
+          <view class="niceicon niceSanMiAppglyphico2"></view>
+        </view>
+      </view>
+    </view>
+  </view>
 </view>

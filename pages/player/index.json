@@ -2,5 +2,7 @@
 	"navigationBarTextStyle": "white",
 	"backgroundColorTop": "#000000",
 	"enablePullDownRefresh": false,
-	"usingComponents": {}
+	"usingComponents": {
+		"n-progress": "/components/progressBar/index"
+	}
 }

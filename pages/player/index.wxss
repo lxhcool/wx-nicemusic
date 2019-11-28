@@ -38,30 +38,102 @@
 }
 
 .background image {
-	width: 100%;
-	height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
-.middle .author {
-  color: #fff;
+.middle {
+	height: 75%;
 }
 
 .middle .cd-wrapper {
-	width: 540rpx;
-	height: 540rpx;
-	border-radius: 50%;
-	box-shadow: 0rpx 0rpx 100rpx 0rpx rgba(0, 0, 0, 0.03);
+  width: 540rpx;
+  height: 540rpx;
+  border-radius: 50%;
+  box-shadow: 0rpx 0rpx 100rpx 0rpx rgba(0, 0, 0, 0.03);
 }
 
 .middle .cd-wrapper .cd-img {
-	width: 440rpx;
-	height: 440rpx;
-	border-radius: 50%;
+  width: 440rpx;
+  height: 440rpx;
+  border-radius: 50%;
   box-shadow: 0rpx 0rpx 200rpx 0rpx rgba(0, 0, 0, 0.5);
 }
 
+.middle .lyric-line {
+	font-size: 28rpx;
+	color: #fff;
+	line-height: 1.868;
+}
+
+.middle .lyric-scroll {
+	width: 100%;
+	height: 50%;
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-60%);
+}
+
 .bottom {
-  width: 80%;
-  height: 2rpx;
-  background: rgba(255, 255, 255, 0.8);
+	width: 100%;
+	height: 25%;
+	padding: 0 20rpx;
+}
+
+.bottom .progress {
+  width: 100%;
+  margin: 0px auto;
+}
+
+.bottom .progress .progress-bar-wrap {
+	width: 100%;
+  flex: 1;
+  margin: 0 25rpx;
+}
+
+.bottom .progress .progress-bar-wrap .time {
+  color: #fff;
+  font-size: 26rpx;
+	margin-bottom: 25rpx;
+}
+
+.bottom .operators {
+	width: 100%;
+	padding: 0 20rpx;
+	margin-top: 80rpx;
+}
+
+.bottom .operators .center {
+	width: 130rpx;
+	height: 130rpx;
+	background: #141e30;
+	/* background: rgba(20,30,48, 0.6); */
+	border-radius: 50%;
+	box-shadow: 0rpx 0rpx 100rpx 0rpx rgba(0, 0, 0, 0.1);
+}
+
+.bottom .operators .center .niceicon {
+	font-size: 40rpx;
+	color: #fff;
+}
+
+.bottom .operators .center .niceicon.nicebofang3 {
+	font-size: 34rpx;
+}
+
+.bottom .operators .left .niceicon,
+.bottom .operators .right .niceicon {
+	font-size: 50rpx;
+	color: #fff;
+}
+
+.bottom .operators .list-icon .niceicon {
+	color: #fff;
+	font-size: 45rpx;
+}
+
+.bottom .operators .mode-icon .niceicon {
+	color: #fff;
+	font-size: 50rpx;
 }

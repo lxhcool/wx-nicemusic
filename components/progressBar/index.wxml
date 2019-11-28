@@ -1,0 +1,8 @@
+<view class="progress-bar flex-row">
+	<view class="bar-inner">
+		<view class="progress"></view>
+		<view class="progress-btn-wrap">
+			<view class="progress-btn"></view>
+		</view>
+	</view>
+</view>
