@@ -3,10 +3,24 @@
     <navBar title="我的" background="rgba(0,0,0,0)" color='#ffffff'></navBar>
   </view>
 	<view class="top">
-  	<image src="/images/bg.jpg" class="bg"></image>
+  	<image src="http://p1.music.126.net/33lE7f8AbqSVJ8BDcVoFYA==/109951163955938109.jpg" class="bg"></image>
 		<view class="user flex-colunm">
-			<image src="https://www.lxhcool.cn/wp-content/uploads/avatars/avatar-1-84.jpg" class="avatar"></image>
-			<text class="name">One</text>
+			<image src="http://p1.music.126.net/qZl6btEhXODod8lQmwEEPw==/109951164073121917.jpg" class="avatar"></image>
 		</view>
+    <view class="username flex-colunm">One</view>
+    <!-- <view class="follow-wrap flex-row">
+      <view class="item">
+        <text class="num">15</text>
+        <text class="title">动态</text>
+      </view>
+      <view class="item">
+        <text class="num">16</text>
+        <text class="title">关注</text>
+      </view>
+      <view class="item">
+        <text class="num">25</text>
+        <text class="title">粉丝</text>
+      </view>
+    </view> -->
 	</view>
 </view>
