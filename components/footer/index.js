@@ -8,6 +8,10 @@ Component({
 		current: {
 			type: Number,
 			value: 1
+		},
+		isOpacity: {
+			type: Boolean,
+			value: true
 		}
 	},
 

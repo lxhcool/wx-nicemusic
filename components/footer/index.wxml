@@ -1,4 +1,4 @@
-<view class="footer-wrap {{isX ? 'isX' : ''}}">
+<view class="footer-wrap {{isX ? 'isX' : ''}} {{isOpacity ? 'opa' : ''}}">
 	<view class="list">
 		<view class="item {{current == 1 ? 'active' : ''}}">
 			<text class="niceicon niceicon-3"></text>

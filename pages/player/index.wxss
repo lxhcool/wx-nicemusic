@@ -1,3 +1,7 @@
+page {
+	background: #ffffff !important;
+}
+
 .nav-title {
   position: relative;
   width: 100%;

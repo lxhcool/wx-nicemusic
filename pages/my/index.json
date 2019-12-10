@@ -1,8 +1,13 @@
 {
 	"navigationBarTextStyle": "white",
-	"backgroundColorTop": "#000000",
-  "enablePullDownRefresh": false,
+	"navigationStyle": "custom",
+	"backgroundColor": "#141e30",
+	"backgroundColorTop": "#141e30",
+	"backgroundColorBottom": "#141e30",
+	"enablePullDownRefresh": false,
+	"disableScroll": true,
 	"usingComponents": {
-		"skeleton": "../../components/skeleton/skeleton"
+		"skeleton": "../../components/skeleton/skeleton",
+		"n-footer": "/components/footer/index"
 	}
 }

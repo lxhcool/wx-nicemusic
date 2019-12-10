@@ -125,6 +125,6 @@
     </view>
   </view>
 </view>
-<n-footer current="1"></n-footer>
+<n-footer current="1" isOpacity="{{false}}"></n-footer>
 <n-gotop floorstatus="{{floorstatus}}"></n-gotop>
 <wxs module="common" src="../../wxs/common.wxs"></wxs>
