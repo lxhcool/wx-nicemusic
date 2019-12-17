@@ -1,18 +1,123 @@
 <view class="my-wrap">
-  <view class="nav">
-    <navBar title="我的" background="rgba(0,0,0,0)" backgroundColorTop="rgba(0,0,0,0)" color='#ffffff'></navBar>
-  </view>
-  <view class="bg">
-    <image src="http://p1.music.126.net/33lE7f8AbqSVJ8BDcVoFYA==/109951163955938109.jpg" class="img"></image>
-  </view>
+	<view class="nav">
+		<navBar title="我的" background="rgba(0,0,0,0)" backgroundColorTop="rgba(0,0,0,0)" color='#ffffff'></navBar>
+	</view>
+	<view class="bg">
+		<image src="http://p1.music.126.net/3751uOe0HEEuy-4Vaago9Q==/109951164553019226.jpg" class="img"></image>
+	</view>
 	<view class="content">
-		<view class="user">
-    		<image src="http://p1.music.126.net/qZl6btEhXODod8lQmwEEPw==/109951164073121917.jpg" class="avatar"></image>
-				<view class="info">
-					<view class="nickname">lxhcool丶</view>
-					<view class="profile">男，爱好女</view>
+		<view class="user" id="user">
+			<image src="http://p1.music.126.net/qZl6btEhXODod8lQmwEEPw==/109951164073121917.jpg" class="avatar"></image>
+			<view class="info">
+				<view class="nickname">lxhcool丶</view>
+				<view class="signature">男，爱好女</view>
+			</view>
+			<view class="sign">签到</view>
+		</view>
+		<view class="profile"  id="profile">
+			<view class="tag">
+				<text class="niceicon nicelevel-10 lv-icon"></text>
+			</view>
+			<view class="tag">
+				<text class="niceicon niceCRM_icon_nanxing sex-icon men"></text>
+				<!-- <text class="niceicon niceCRM_icon_nvxing sex-icon women"></text> -->
+				<text>95后 - 天秤座</text>
+			</view>
+			<view class="tag">
+				<text class="niceicon nicedingwei2 area-icon"></text>
+				<text>{{provinceName}} - {{cityName}}</text>
+			</view>
+		</view>
+		<!-- <view class="follow" id="follow">
+			<view class="item">
+				<text class="num">20973</text>
+				<text class="name">听歌数</text>
+			</view>
+			<view class="item">
+				<text class="num">16</text>
+				<text class="name">关注</text>
+			</view>
+			<view class="item">
+				<text class="num">25</text>
+				<text class="name">粉丝</text>
+			</view>
+		</view>
+		<view class="scroll">
+			<scroll-view scroll-y="true" style="height: {{scrollViewHeight}}px">
+				<view class="title">我创建的歌单</view>
+				<view class="item">
+					<image class="cover" src="https://p1.music.126.net/wvR_5Jq7HUPKUR1_gLKE7g==/3287539768551563.jpg" mode="" />
+					<view class="info">
+						<text class="name">lxhcool丶喜欢的音乐</text>
+						<text class="desc">65首，播放1019次</text>
+					</view>
 				</view>
-  	</view>
-	</view>	
+				<view class="item">
+					<image class="cover" src="http://p1.music.126.net/JpFZZRh73A4ek_ptQdH-dA==/109951163349407620.jpg" mode="" />
+					<view class="info">
+						<text class="name">【纯音乐】一切都会好起来的。</text>
+						<text class="desc">113首，播放1019次</text>
+					</view>
+				</view>
+				<view class="item">
+					<image class="cover" src="http://p1.music.126.net/d37rAXG8g8lo_k3n3csyVA==/109951163988766034.jpg" mode="" />
+					<view class="info">
+						<text class="name">经典老歌，歌声飘过30年</text>
+						<text class="desc">65首，播放1019次</text>
+					</view>
+				</view>
+				<view class="item">
+					<image class="cover" src="http://p1.music.126.net/qY08Na04I_H6FAquG6ybqw==/1323811999893829.jpg" mode="" />
+					<view class="info">
+						<text class="name">苏荷</text>
+						<text class="desc">65首，播放1019次</text>
+					</view>
+				</view>
+				<view class="item">
+					<image class="cover" src="http://p1.music.126.net/MiL8INJBrvJUqrNKEptqZw==/109951164198314539.jpg" mode="" />
+					<view class="info">
+						<text class="name">全球冠军单曲</text>
+						<text class="desc">65首，播放1019次</text>
+					</view>
+				</view>
+				<view class="title">我收藏的歌单</view>
+				<view class="item">
+					<image class="cover" src="https://p1.music.126.net/wvR_5Jq7HUPKUR1_gLKE7g==/3287539768551563.jpg" mode="" />
+					<view class="info">
+						<text class="name">lxhcool丶喜欢的音乐</text>
+						<text class="desc">65首，播放1019次</text>
+					</view>
+				</view>
+				<view class="item">
+					<image class="cover" src="http://p1.music.126.net/JpFZZRh73A4ek_ptQdH-dA==/109951163349407620.jpg" mode="" />
+					<view class="info">
+						<text class="name">【纯音乐】一切都会好起来的。</text>
+						<text class="desc">113首，播放1019次</text>
+					</view>
+				</view>
+				<view class="item">
+					<image class="cover" src="http://p1.music.126.net/d37rAXG8g8lo_k3n3csyVA==/109951163988766034.jpg" mode="" />
+					<view class="info">
+						<text class="name">经典老歌，歌声飘过30年</text>
+						<text class="desc">65首，播放1019次</text>
+					</view>
+				</view>
+				<view class="item">
+					<image class="cover" src="http://p1.music.126.net/qY08Na04I_H6FAquG6ybqw==/1323811999893829.jpg" mode="" />
+					<view class="info">
+						<text class="name">苏荷</text>
+						<text class="desc">65首，播放1019次</text>
+					</view>
+				</view>
+				<view class="item">
+					<image class="cover" src="http://p1.music.126.net/MiL8INJBrvJUqrNKEptqZw==/109951164198314539.jpg" mode="" />
+					<view class="info">
+						<text class="name">全球冠军单曲</text>
+						<text class="desc">65首，播放1019次</text>
+					</view>
+				</view>
+			</scroll-view>
+		</view> -->
+	</view>
 </view>
-<n-footer current="1" isOpacity="{{true}}"></n-footer>
+<!-- <n-footer current="1" isOpacity="{{true}}" id="footer" bind:onHeight = "getFooterHeight"></n-footer> -->

@@ -2,61 +2,69 @@
 @import 'common/styles/common.wxss';
 
 page {
-	width: 100%;
-	height: 100%;
-	/* background: #141e30; */
-	font-family: "PingFangSC-Thin";
+  width: 100%;
+  height: 100%;
+  /* background: #141e30; */
+  font-family: "PingFangSC-Thin";
 }
 
-view, navigator, scroll-view, cover-view, canvas, button, swiper-item, text {
+view,
+navigator,
+scroll-view,
+cover-view,
+canvas,
+button,
+swiper-item,
+text {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-view::after, view::before {
+view::after,
+view::before {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 .container {
-	padding-bottom: 140rpx;
+  padding-bottom: 140rpx;
 }
 
 .nav {
-	height: 0;
+  height: 0;
 }
 
 .flex-row {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .flex-colunm {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .flex-between {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .flex-end {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: flex-end;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 image {
-	max-width: 100%;
-	border: 0;
+  max-width: 100%;
+  border: 0;
 }
 
 .ellipsis {

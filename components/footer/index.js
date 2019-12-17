@@ -31,6 +31,14 @@ Component({
 			this.setData({
 				isX
 			})
+		},
+		toHome() {
+			if(this.data.current === 1) {
+				return
+			}
+			wx.reLaunch({
+				url: '/pages/home/index'
+			})
 		}
 	},
 	attached () {

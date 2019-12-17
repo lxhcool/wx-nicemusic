@@ -7,7 +7,7 @@
 ></n-skeleton>
 
 <view class="home-wrap container {{isX ? 'isX' : ''}}" wx:if="{{pageIsReady}}">
-  <navBar background='#141e30' backgroundColorTop='#141e30' color='#fff' iconTheme='white'>
+  <navBar background='#15151b' backgroundColorTop='#15151b' color='#fff' iconTheme='white'>
     <n-song-icon slot="left" playing="{{playing}}" />
     <view slot="center" class="search-wrap flex-row">
       <view class="niceicon nicesearch search-icon flex-row"></view>
@@ -112,7 +112,7 @@
 						<text class="name ellipsis">{{item.name}}</text>
 					</view>
 					<view class="comment flex-row">
-						<text class="niceicon niceicon-"></text>
+						<text class="niceicon nicegeshou"></text>
 						<view class="author-list flex-row">
 							<view class="dot" wx:for="{{item.artists}}" wx:for-index="author" wx:for-item="itemAuthor" wx:key="id">{{itemAuthor.name}}</view>
 						</view>

@@ -2,7 +2,10 @@
  * 随机数组中取几个元素
  */
 function getRandomArrayElements(arr, count) {
-	var shuffled = arr.slice(0), i = arr.length, min = i - count, temp, index;
+	var shuffled = arr.slice(0),
+		i = arr.length,
+		min = i - count,
+		temp, index;
 	while (i-- > min) {
 		index = Math.floor((i + 1) * Math.random());
 		temp = shuffled[index];
@@ -29,8 +32,13 @@ function tranNumber(num, point) {
 	}
 }
 
+function getAstro(m, d) {
+	return "魔羯水瓶双鱼白羊金牛双子巨蟹狮子处女天秤天蝎射手魔羯".substr(m * 2 - (d < "102223444433".charAt(m - 1) - -19) * 2, 2) + '座';
+}
+
 
 module.exports = {
 	getRandomArrayElements,
-	tranNumber
+	tranNumber,
+	getAstro
 }

@@ -1,6 +1,6 @@
 <view class="footer-wrap {{isX ? 'isX' : ''}} {{isOpacity ? 'opa' : ''}}">
 	<view class="list">
-		<view class="item {{current == 1 ? 'active' : ''}}">
+		<view class="item {{current == 1 ? 'active' : ''}}" bind:tap="toHome">
 			<text class="niceicon niceicon-3"></text>
 			<text class="name">发现</text>
 		</view>

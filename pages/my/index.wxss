@@ -31,7 +31,7 @@ page  {
 	top: 0;
 	left: 0;
 	z-index: 100;
-	filter: blur(15px);
+	filter: blur(20px);
 }
 
 .content {
@@ -42,9 +42,10 @@ page  {
 
 .user {
 	width: 100%;
-	padding-top: 248rpx;
+	padding-top: 200rpx;
 	display: flex;
 	align-items: center;
+	margin-bottom: 30rpx;
 }
 
 .user .avatar {
@@ -54,13 +55,153 @@ page  {
 	margin-right: 30rpx;
 }
 
+.user .info {
+	flex: 1;
+}
+
 .user .nickname {
 	font-size: 32rpx;
 	color: #fff;
 	margin-bottom: 10rpx;
 }
 
-.user .profile {
+.user .signature {
 	font-size: 26rpx;
 	color: #fff;
+}
+
+.user .sign {
+	padding: 8rpx 30rpx;
+	background: #ff5b73;
+	font-size: 22rpx;
+	border-radius: 100rpx;
+	color: #fff;
+	font-weight: bold;
+}
+
+.profile {
+	width: 100%;
+	display: flex;
+}
+
+.profile .tag {
+	background: rgba(0,0,0, 0.4);
+	height: 46rpx;
+	display: flex;
+	padding: 0 30rpx;
+	border-radius: 50rpx;
+	align-items: center;
+	justify-content: center;
+	margin-right: 20rpx;
+}
+
+.profile .tag .lv-icon {
+	font-size: 40rpx;
+	color: #fff;
+}
+
+.profile .tag .sex-icon {
+	font-size: 28rpx;
+	margin-right: 5rpx;
+	font-weight: bold;
+}
+
+.profile .tag .sex-icon.men {
+	color: #4192eb;
+}
+
+.profile .tag .sex-icon.women {
+	color: #F4606C;
+}
+
+.profile .tag .area-icon {
+	font-size: 20rpx;
+	margin-right: 5rpx;
+}
+
+.profile .tag text {
+	color: #fff;
+	font-size: 22rpx;
+}
+
+.follow  {
+	width: 100%;
+	margin-top: 40rpx;
+	background: rgba(0,0,0, 0.4);
+	border-radius: 15rpx;
+	display: flex;
+	padding: 30rpx 0;
+	margin-bottom: 30rpx;
+}
+
+.follow .item  {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	flex: 1;
+	position: relative;
+}
+
+.follow .item::after {
+	content: '';
+	width: 2rpx;
+	height: 40rpx;
+	background: rgba(255,255,255, 0.4);
+	position: absolute;
+	right: 0;
+	top: 50%;
+	margin-top: -20rpx;
+	z-index: 20;
+}
+
+.follow .item:last-child::after {
+	opacity: 0;
+}
+
+.follow .item  .num {
+	font-size: 46rpx;
+	margin-bottom: 10rpx;
+	color: #fff;
+}
+
+.follow .item  .name {
+	font-size: 22rpx;
+	color: #fff;
+}
+
+.scroll .title {
+	font-size: 32rpx;
+	color: #ffffff;
+	margin-bottom: 30rpx;
+}
+
+.scroll .item {
+	display: flex;
+	margin-bottom: 30rpx;
+}
+
+.scroll  .item .cover {
+	width: 120rpx;
+	height: 120rpx;
+	border-radius: 10rpx;
+	margin-right: 20rpx;
+}
+
+.scroll  .item .info {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.scroll  .item .info .name {
+	font-size: 32rpx;
+	color: #fff;
+	margin-bottom: 15rpx;
+}
+
+.scroll  .item .info .desc {
+	font-size: 26rpx;
+	color: rgba(255,255,255, 0.8);
+	margin-bottom: 15rpx;
 }
