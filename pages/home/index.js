@@ -5,14 +5,6 @@ const api = new Api()
 
 Page({
   data: {
-		skeleton: {
-			loadingTypes: ['spin', 'chiaroscuro', 'shine', 'null'],
-			selectedLoadingType: 'shine',
-			isDev: false,
-			bgcolor: '#FFF',
-			skeletonData
-		},
-		pageIsReady: false,
     playing: false, // 是否执行播放动画
 		cardCur: 0,
 		currentDay: 0,

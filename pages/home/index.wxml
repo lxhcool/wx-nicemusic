@@ -1,12 +1,4 @@
-<n-skeleton
-  loading="{{ skeleton.selectedLoadingType }}"
-  bgcolor="{{ skeleton.bgcolor }}"
-  isDev="{{ skeleton.isDev }}"
-  data="{{ skeleton.skeletonData }}"
-  wx:if="{{ !pageIsReady || skeleton.isDev }}"
-></n-skeleton>
-
-<view class="home-wrap container {{isX ? 'isX' : ''}}" wx:if="{{pageIsReady}}">
+<view class="home-wrap container {{isX ? 'isX' : ''}}">
   <navBar background='#15151b' backgroundColorTop='#15151b' color='#fff' iconTheme='white'>
     <n-song-icon slot="left" playing="{{playing}}" />
     <view slot="center" class="search-wrap flex-row">

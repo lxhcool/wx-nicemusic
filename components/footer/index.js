@@ -32,13 +32,22 @@ Component({
 				isX
 			})
 		},
-		toHome() {
-			if(this.data.current === 1) {
+		toMenu(e) {
+			console.log(e)
+			let current = e.currentTarget.dataset.current
+			let page = e.currentTarget.dataset.page
+			if (this.data.current === current) {
 				return
 			}
 			wx.reLaunch({
-				url: '/pages/home/index'
+				url: `/pages/${page}/index`
 			})
+			// if(this.data.current === 1) {
+			// 	return
+			// }
+			// wx.reLaunch({
+			// 	url: '/pages/home/index'
+			// })
 		}
 	},
 	attached () {

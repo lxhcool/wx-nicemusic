@@ -1,6 +1,6 @@
 <view class="footer-wrap {{isX ? 'isX' : ''}} {{isOpacity ? 'opa' : ''}}">
 	<view class="list">
-		<view class="item {{current == 1 ? 'active' : ''}}" bind:tap="toHome">
+		<view class="item {{current == 1 ? 'active' : ''}}" bind:tap="toMenu" data-current="1" data-page="home">
 			<text class="niceicon niceicon-3"></text>
 			<text class="name">发现</text>
 		</view>
@@ -17,8 +17,8 @@
 			<text class="niceicon niceicon-5"></text>
 			<text class="name">歌单</text>
 		</view>
-		<view class="item {{current == 4 ? 'active' : ''}}">
-			<text class="niceicon niceicon-2"></text>
+		<view class="item {{current == 4 ? 'active' : ''}}" bind:tap="toMenu" data-current="1" data-page="my">
+			<text class="niceicon niceicon-4"></text>
 			<text class="name">我的</text>
 		</view>
 	</view>

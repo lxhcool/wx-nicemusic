@@ -5,18 +5,15 @@
   height: 130rpx;
   border-radius: 10rpx 10rpx 0 0;
   position: fixed;
-  /* background: linear-gradient(to right, #73414a, rgba(20,30,48, 0.95)); */
-  background: rgba(20,30,48, 0.95);
   background: rgba(18,18,24, 0.95);
   left: 0;
   bottom: 0;
   z-index: 8888;
-  box-shadow: 0px 1px 5px 0px rgba(20,30,48, 0.95);
+  box-shadow: 0px 1px 5px 0px rgba(18,18,24, 0.95);
 }
 
 .footer-wrap.opa {
-	background: linear-gradient(to right, rgba(115,65,74, 0.95), rgba(20,30,48, 0.2));
-	box-shadow: none;
+  background: rgba(18,18,24, 0.95);
 }
 
 .footer-wrap.isX {
