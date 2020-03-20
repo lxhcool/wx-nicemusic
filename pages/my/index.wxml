@@ -1,34 +1,39 @@
 <view class="my-wrap">
-	<view class="nav">
-		<navBar title="我的" background="rgba(0,0,0,0)" backgroundColorTop="rgba(0,0,0,0)" color='#ffffff'></navBar>
-	</view>
-	<!-- <view class="bg">
-		<image src="http://p1.music.126.net/3751uOe0HEEuy-4Vaago9Q==/109951164553019226.jpg" class="img"></image>
-	</view> -->
-	<view class="content">
-		<view class="user" id="user">
-			<image src="http://p1.music.126.net/qZl6btEhXODod8lQmwEEPw==/109951164073121917.jpg" class="avatar"></image>
-			<view class="info">
-				<view class="nickname">lxhcool丶</view>
-				<view class="signature">男，爱好女</view>
-			</view>
-			<view class="sign">签到</view>
+  <view class="nav">
+    <navBar title="我的" background="rgba(0,0,0,0)" backgroundColorTop="rgba(0,0,0,0)" color='#ffffff'></navBar>
+  </view>
+  <view class="content">
+    <view class="top">
+      <view class="bg">
+				<image src="https://oss.getimg.net/cc/2019/06/07/smartisan_lockscreen_9.jpg" class="img" mode="aspectFill"></image>
+			</view>	
+      <view class="user" id="user">
+        <image src="http://p1.music.126.net/qZl6btEhXODod8lQmwEEPw==/109951164073121917.jpg" class="avatar"></image>
+        <view class="info">
+          <view class="nickname">lxhcool丶</view>
+          <view class="signature">男，爱好女</view>
+        </view>
+        <view class="sign">签到</view>
+      </view>
+      <view class="profile" id="profile">
+        <view class="tag">
+          <text class="niceicon nicelevel-10 lv-icon"></text>
+        </view>
+        <view class="tag">
+          <text class="niceicon niceCRM_icon_nanxing sex-icon men"></text>
+          <!-- <text class="niceicon niceCRM_icon_nvxing sex-icon women"></text> -->
+          <text>95后 - 天秤座</text>
+        </view>
+        <view class="tag">
+          <text class="niceicon nicedingwei2 area-icon"></text>
+          <text>{{provinceName}} - {{cityName}}</text>
+        </view>
+      </view>
+    </view>
+		<view>
+			<view class=""></view>
 		</view>
-		<view class="profile"  id="profile">
-			<view class="tag">
-				<text class="niceicon nicelevel-10 lv-icon"></text>
-			</view>
-			<view class="tag">
-				<text class="niceicon niceCRM_icon_nanxing sex-icon men"></text>
-				<!-- <text class="niceicon niceCRM_icon_nvxing sex-icon women"></text> -->
-				<text>95后 - 天秤座</text>
-			</view>
-			<view class="tag">
-				<text class="niceicon nicedingwei2 area-icon"></text>
-				<text>{{provinceName}} - {{cityName}}</text>
-			</view>
-		</view>
-		<!-- <view class="follow" id="follow">
+    <!-- <view class="follow" id="follow">
 			<view class="item">
 				<text class="num">20973</text>
 				<text class="name">听歌数</text>
@@ -118,6 +123,6 @@
 				</view>
 			</scroll-view>
 		</view> -->
-	</view>
+  </view>
 </view>
 <n-footer current="4"></n-footer>
