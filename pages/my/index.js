@@ -1,3 +1,5 @@
+const app = getApp()
+console.log(app.globalData)
 import area from '../../utils/area'
 import common from '../../utils/common'
 Page({
@@ -6,31 +8,20 @@ Page({
 	 * 页面的初始数据
 	 */
 	data: {
-		province: "330000",
+		province: app.globalData.userInfo.province,
 		provinceName: '',
-		city: "330100",
+		city: app.globalData.userInfo.city,
 		cityName: '',
-		areaList: area.areaList
+		areaList: area.areaList,
+		userInfo: app.globalData.userInfo,
+		age: ''
 	},
 
 	/**
 	 * 生命周期函数--监听页面加载
 	 */
 	onLoad: function (options) {
-		let that = this
-		this.data.areaList.map((item, index) => {
-			if(this.data.province === item.area_id) {
-				item.city.map((citem, cindex) => {
-					if(this.data.city === citem.area_id) {
-						this.setData({
-							provinceName: item.area_name,
-							cityName: citem.area_name
-						})
-					}
-				})
-			}
-		})
-		console.log(common.getAstro(9, 29))
+		this._init()
 	},
 
 	/**
@@ -47,38 +38,27 @@ Page({
 
 	},
 
-	getFooterHeight (e) {
-		this.setData({
-			footerHeight: e.detail
+	// 初始化
+	_init () {
+		let areaList = this.data.areaList
+		let provinceName = ''
+		let cityName = ''
+		let age = common.getAstro(this.data.userInfo.birthday)
+		areaList.map(item => {
+			if(this.data.province == item.area_id) {
+				item.city.map(citem => {
+					if(this.data.city == citem.area_id) {
+						provinceName = item.area_name
+						cityName = citem.area_name
+					}
+				})
+			}
 		})
-	},
-
-	/**
-	 * 生命周期函数--监听页面隐藏
-	 */
-	onHide: function () {
-
-	},
-
-	/**
-	 * 生命周期函数--监听页面卸载
-	 */
-	onUnload: function () {
-
-	},
-
-	/**
-	 * 页面相关事件处理函数--监听用户下拉动作
-	 */
-	onPullDownRefresh: function () {
-
-	},
-
-	/**
-	 * 页面上拉触底事件的处理函数
-	 */
-	onReachBottom: function () {
-
+		this.setData({
+			provinceName,
+			cityName,
+			age
+		})
 	},
 
 	/**

@@ -32,8 +32,16 @@ function tranNumber(num, point) {
 	}
 }
 
-function getAstro(m, d) {
-	return "魔羯水瓶双鱼白羊金牛双子巨蟹狮子处女天秤天蝎射手魔羯".substr(m * 2 - (d < "102223444433".charAt(m - 1) - -19) * 2, 2) + '座';
+// 获取是几几后，星座
+function getAstro(timestamp) {
+	let newDate = new Date()
+	newDate.setTime(timestamp);
+	let birthday = newDate.toLocaleDateString(timestamp)
+	let birthdayArr = birthday.split('/')
+	let year = birthdayArr[0].substring(birthdayArr[0].length-2) + '后'
+	let month = birthdayArr[1]
+	let day = birthdayArr[2]
+	return year + " - " + "魔羯水瓶双鱼白羊金牛双子巨蟹狮子处女天秤天蝎射手魔羯".substr(month * 2 - (day < "102223444433".charAt(month - 1) - -19) * 2, 2) + '座';
 }
 
 

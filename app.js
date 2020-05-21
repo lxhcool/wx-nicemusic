@@ -2,9 +2,22 @@ const wxApiPromiseFunc = require('./utils/wxApiPromiseFun');
 
 App({
   onLaunch: function () {
+		let that = this
+		let isLogin = wx.getStorageSync('isLogin')
+		let userInfo = wx.getStorageSync('userInfo')
+		if (isLogin) {
+			that.globalData.userInfo = userInfo
+			that.globalData.isLogin = isLogin
+		} else {
+			wx.redirectTo({
+				url: `/pages/login/index`
+			})
+			that.globalData.userInfo = {}
+			that.globalData.isLogin = false
+		}
   },
 	onShow: function () {
-		let that = this;
+		let that = this
 		wx.getSystemInfo({
 			success: (res) => {
 				let model = res.model;
@@ -16,6 +29,8 @@ App({
 	},
 	promiseFunc: wxApiPromiseFunc.wxApiPromiseFunc,
   globalData: {
-		isIphoneX: false
+		isIphoneX: false,
+		isLogin: false,
+		userInfo: {}
   }
 })

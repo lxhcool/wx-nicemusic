@@ -1,2 +1,24 @@
-<!--pages/login/index.wxml-->
-<text>pages/login/index.wxml</text>
+<!-- <view class="logo"></view> -->
+<view class="login-wrap flex-colunm">
+	<view class="nav">
+		<navBar title="登录" background="rgba(0,0,0,0)" backgroundColorTop="rgba(0,0,0,0)" color='#ffffff'></navBar>
+	</view>
+  <view class="background">
+    <image src="../../images/bg.jpg"></image>
+  </view>
+	<image class="logo" src="../../images/logo.png"></image>
+  <view class="title">Nice Music</view>
+  <view class="form">
+    <view class="item flex-row">
+      <view class="niceicon nicephone2"></view>
+      <input bind:input="getPhone" maxlength="11" type="number" class="text" placeholder="请输入手机号" placeholder-class="placeholder-class"></input>
+    </view>
+    <view class="item flex-row">
+      <view class="niceicon nicemima"></view>
+      <input bind:input="getPassword" type="password" class="text" placeholder="请输入密码" placeholder-class="placeholder-class"></input>
+    </view>
+    <view class="foot">
+      <button class="login-button flex-row" bind:tap="login">登录</button>
+    </view>
+  </view>
+</view>

@@ -29,14 +29,12 @@ class HTTP {
 			success: (res) => {
 				let response = res.data;
 				if (response.code != 200) {
-					// if (response.code != 40011 && response.code != 40012) {
-					// 	wx.showToast({
-					// 		title: response.error_msg,
-					// 		icon: 'none',
-					// 		duration: 2000
-					// 	})
-					// }
-					// reject(new Error(response.error_msg));
+					wx.showToast({
+						title: response.msg,
+						icon: 'none',
+						duration: 2000
+					})
+					reject(new Error(response.msg));
 				}
 				resolve(response);
 			},
