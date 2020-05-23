@@ -1,19 +1,17 @@
-const app = getApp()
-console.log(app.globalData)
 import area from '../../utils/area'
 import common from '../../utils/common'
+import { Api } from '../../apis/index.js'
+const api = new Api()
 Page({
 
 	/**
 	 * 页面的初始数据
 	 */
 	data: {
-		province: app.globalData.userInfo.province,
 		provinceName: '',
-		city: app.globalData.userInfo.city,
 		cityName: '',
 		areaList: area.areaList,
-		userInfo: app.globalData.userInfo,
+		userInfo: '',
 		age: ''
 	},
 
@@ -40,14 +38,15 @@ Page({
 
 	// 初始化
 	_init () {
+    let userInfo = wx.getStorageSync('userInfo')
 		let areaList = this.data.areaList
 		let provinceName = ''
 		let cityName = ''
 		let age = common.getAstro(this.data.userInfo.birthday)
 		areaList.map(item => {
-			if(this.data.province == item.area_id) {
+			if (userInfo.province == item.area_id) {
 				item.city.map(citem => {
-					if(this.data.city == citem.area_id) {
+          if (userInfo.city == citem.area_id) {
 						provinceName = item.area_name
 						cityName = citem.area_name
 					}
@@ -57,9 +56,23 @@ Page({
 		this.setData({
 			provinceName,
 			cityName,
-			age
+			age,
+      userInfo
 		})
+    this.getUserRecord()
 	},
+
+  // 获取用户播放记录
+  getUserRecord () {
+    console.log(this.data.userInfo)
+    let params = {
+      uid: this.data.userInfo.userId,
+      type: 0
+    }
+    api.getUserRecord(params).then(res => {
+      console.log(res)
+    })
+  },
 
 	/**
 	 * 用户点击右上角分享

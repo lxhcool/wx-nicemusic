@@ -9,7 +9,7 @@ App({
 			that.globalData.userInfo = userInfo
 			that.globalData.isLogin = isLogin
 		} else {
-			wx.redirectTo({
+			wx.reLaunch({
 				url: `/pages/login/index`
 			})
 			that.globalData.userInfo = {}

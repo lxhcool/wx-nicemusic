@@ -33,7 +33,6 @@ Component({
 			})
 		},
 		toMenu(e) {
-			console.log(e)
 			let current = e.currentTarget.dataset.current
 			let page = e.currentTarget.dataset.page
 			if (this.data.current === current) {
@@ -42,12 +41,6 @@ Component({
 			wx.reLaunch({
 				url: `/pages/${page}/index`
 			})
-			// if(this.data.current === 1) {
-			// 	return
-			// }
-			// wx.reLaunch({
-			// 	url: '/pages/home/index'
-			// })
 		}
 	},
 	attached () {

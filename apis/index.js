@@ -45,6 +45,16 @@ class Api extends HTTP {
       }
     })
   }
+  
+  // 获取用户播放记录
+  getUserRecord(params) {
+    return this.request({
+      url: 'user/record',
+      data: {
+        ...params
+      }
+    })
+  }
 }
 
 export {
